@@ -1,0 +1,31 @@
+<!-- index_error.html -->
+
+<!doctype html>
+
+<head>
+	
+	<title>BMI Calculator</title>
+	
+</head>
+
+<h1>BMI Calculator</h1>
+
+<body>
+
+<div>
+	<form method="POST" action="/">
+	Height (cm): <br>
+	<input type="text" name="height"><br><br>
+	Weight (kg): <br>
+	<input type="text" name="weight"><br><br>
+	<button type="submit" value="Submit">Calculate</button>
+	</form>
+</div>
+
+<br>
+
+<div>
+    {% print("Wrong input. Please fill height and weight in number") %}
+</div>
+
+</body>

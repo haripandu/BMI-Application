@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!doctype html>
+
+<head>
+	
+	<title>BMI Calculator</title>
+	
+</head>
+
+<h1>BMI Calculator</h1>
+
+<body>
+
+<div>
+	<form method="POST" action="/">
+	Height (cm): <br>
+	<input type="text" name="height"><br><br>
+	Weight (kg): <br>
+	<input type="text" name="weight"><br><br>
+	<button type="submit" value="Submit">Calculate</button>
+	</form>
+</div>
+
+<br>
+
+<div>
+	{% if bmi %}
+	    <p>
+        {% print("BMI : {}.".format(bmi)) %}
+        </p>
+	{% endif %}
+</div>
+
+<div>
+	{% if label %}
+	    <p>
+        {% print("BMI Label : {}.".format(label)) %}
+        </p>
+	{% endif %}
+</div>
+
+</body>
