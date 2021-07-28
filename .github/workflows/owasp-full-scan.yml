@@ -1,14 +1,21 @@
 on:
   schedule:
-    # Runs every day At 01:00.
-    - cron:  '0 1 * * *'
+    # Runs every day At 10:00.
+    - cron:  '1 0 * * *'
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan ZAP website
+    name: Scan the webapplication
     steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.1.0
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
+          ref: master
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://hpdm-bmi-app.herokuapp.com/'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a'
