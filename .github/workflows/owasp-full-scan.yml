@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '28 13 * * *'
+    - cron:  '37 13 * * *'
 
 jobs:
   zap_scan:
@@ -16,5 +16,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://hpdm-bmi-app.herokuapp.com/'
-          rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
