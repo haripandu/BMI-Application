@@ -1,4 +1,4 @@
-# lanandra BMI Calculator
+# BMI Calculator
 Calculator for Body Mass Index  
 
 ## Prerequisites  
@@ -100,8 +100,8 @@ If you need REST API service from this application, you can use this method:
 
 If you are interesting to preview the feature for this app, please check heroku deployment on this link:  
 
-Main application: [https://lanandra-bmi-calculator.herokuapp.com/](https://lanandra-bmi-calculator.herokuapp.com/)  
+Main application: [https://hpdm-bmi-app.herokuapp.com/](https://hpdm-bmi-app.herokuapp.com/)  
   
-REST API: https://lanandra-bmi-calculator.herokuapp.com/api?height=float&weight=float  
+REST API: https://hpdm-bmi-app.herokuapp.com/  
 Change height and weight for your input, example:  
-[https://lanandra-bmi-calculator.herokuapp.com/api?height=167&weight=70](https://lanandra-bmi-calculator.herokuapp.com/api?height=167&weight=70)
+[https://hpdm-bmi-app.herokuapp.com/api?height=167&weight=70]https://hpdm-bmi-app.herokuapp.com/api?height=167&weight=70)
