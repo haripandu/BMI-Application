@@ -23,15 +23,20 @@ This means that the script doesn't perform any actual ‘attacks’ and will run
 This means that the script does perform actual ‘attacks’ and can potentially run for a long period of time.
 
 6. Both baseline scan and full scan scripts are on ZAPROXY repository.
+
 Baseline scan repository (https://github.com/zaproxy/action-baseline.git)
+
 Full scan repository (https://github.com/zaproxy/action-full-scan.git)
 
 7. When push a change to BMI-Application repository, owasp-scan.yml as a workflow triggered baseline and full scan. After scanning completed, Github will issued each report through Github Actions.
 Report can be downloaded on email notification from github-actions[bot] or list reports on this [https://github.com/haripandu/BMI-Application/issues].
 
-8. Please find below for reports which is issued by Github Action.
-ZAP Full Scan : https://github.com/haripandu/BMI-Application/actions/runs/1083347860
-ZAP Baseline Scan : https://github.com/haripandu/BMI-Application/actions/runs/1083347860
+8. Please find below for sample reports which is issued by Github Action.
+ZAP Full Scan Report : https://github.com/haripandu/BMI-Application/issues/10
+ZAP Baseline Scan Report : https://github.com/haripandu/BMI-Application/issues/9
+
+9. The downloaded report will informed what the vulnerability finding with risk level (High, Medium, Low & Informational).
+
 
 ## How to Use  
 
