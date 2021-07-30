@@ -4,7 +4,7 @@
 FROM python:3.7
 
 # Set label
-LABEL version="v1.0.1" maintainer="luthfi.anandra@gmail.com"
+LABEL version="v1.0.0" maintainer="hp.dairi@gmail.com"
 
 # Copy and install requirements
 COPY requirements.txt /
