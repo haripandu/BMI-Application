@@ -20,7 +20,7 @@ jobs:
           cmd_options: '-a'
 #Dynamic Application Security Testing with ZAP and GitHub Actions
       - name: ZAP Full Scan
-        uses: action-full-scan@v0.2.0
+        uses: zaproxy/action-full-scan@v0.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://hpdm-bmi-app.herokuapp.com/api?height=167&weight=70'
