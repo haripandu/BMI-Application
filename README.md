@@ -32,7 +32,9 @@ Full scan repository (https://github.com/zaproxy/action-full-scan.git)
 Report can be downloaded on email notification from github-actions[bot] or list reports on this [https://github.com/haripandu/BMI-Application/issues].
 
 8. Please find below for sample reports which is issued by Github Action.
+
 ZAP Full Scan Report : https://github.com/haripandu/BMI-Application/issues/10
+
 ZAP Baseline Scan Report : https://github.com/haripandu/BMI-Application/issues/9
 
 9. The downloaded report will informed what the vulnerability finding with risk level (High, Medium, Low & Informational).
