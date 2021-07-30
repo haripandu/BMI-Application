@@ -51,13 +51,13 @@ Before use this application, please make sure you have been installed these prer
 
 1. Pull image from Docker Hub  
 
-        docker pull lanandra/bmi-calculator  
+        docker pull haripandu/BMI-Application  
 
 2. Run container  
 
    Example: You can run this container on detached mode and run on default port 5000
 
-        docker run -d -p 5000:5000 --name bmi-calculator lanandra/bmi-calculator:latest  
+        docker run -d -p 5000:5000 --name bmi-calculator haripandu/BMI-Application:latest  
 
 3. From your web browser access the application. Default port is 5000.  
 
@@ -96,7 +96,7 @@ If you need REST API service from this application, you can use this method:
         "label": "Overweight"
         }  
 
-### heroku mock up lab  
+### HEROKU Mock Up Lab  
 
 If you are interesting to preview the feature for this app, please check heroku deployment on this link:  
 
