@@ -1,4 +1,4 @@
-# BMI Calculator
+# BMI Application
 Calculator for Body Mass Index  
 
 ## Prerequisites  
@@ -8,6 +8,30 @@ Also supported to run on Docker Container.
 Before use this application, please make sure you have been installed these prerequisites:
 - python 3.7+. You also can create virtual environment first before running this application  
 - Docker Container Runtime installed (If you want to run this application as container)
+
+## What is implementing?
+1. BMI Web Application which hosted on HEROKU.
+
+2. CI/CD workflow is performing baseline scan and full scan from OWASP ZAPROXY. It used ZAPROXY Github repository when scanning.
+
+3. Both baseline scan and full scan are triggered by push to BMI Application repository on Github.
+
+4. Baseline scan is a script that runs the ZAP spider against the specified target for (by default) 1 minute and then waits for the passive scanning to complete before reporting the results. 
+This means that the script doesn't perform any actual ‘attacks’ and will run for a relatively short period of time (a few minutes at most).
+
+5. Full scan is a script that runs the ZAP spider against the specified target (by default with no time limit) followed by an optional ajax spider scan and then a full active scan before reporting the results.
+This means that the script does perform actual ‘attacks’ and can potentially run for a long period of time.
+
+6. Both baseline scan and full scan scripts are on ZAPROXY repository.
+Baseline scan repository (https://github.com/zaproxy/action-baseline.git)
+Full scan repository (https://github.com/zaproxy/action-full-scan.git)
+
+7. When push a change to BMI-Application repository, owasp-scan.yml as a workflow triggered baseline and full scan. After scanning completed, Github will issued each report through Github Actions.
+Report can be downloaded on email notification from github-actions[bot] or list reports on this [https://github.com/haripandu/BMI-Application/issues].
+
+8. Please find below for reports which is issued by Github Action.
+ZAP Full Scan : https://github.com/haripandu/BMI-Application/actions/runs/1083347860
+ZAP Baseline Scan : https://github.com/haripandu/BMI-Application/actions/runs/1083347860
 
 ## How to Use  
 
