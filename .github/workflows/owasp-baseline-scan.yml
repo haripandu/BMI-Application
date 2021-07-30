@@ -17,7 +17,7 @@ jobs:
           target: 'https://hpdm-bmi-app.herokuapp.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-       - name: ZAP Scan
+      - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
