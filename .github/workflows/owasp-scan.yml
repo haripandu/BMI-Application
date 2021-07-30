@@ -1,6 +1,7 @@
 on: [push]
 
-#scanning vulnerability when push from git with ZAPROXY vulnerability assesment tools#
+#Perform Scanning on Website when new configuration pushed to GitHub
+
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
@@ -10,17 +11,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
-      - name: ZAP Scan
+#Automate Security Testing with ZAP and GitHub Actions
+      - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://hpdm-bmi-app.herokuapp.com/'
-          rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-      - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.4.0
+#Dynamic Application Security Testing with ZAP and GitHub Actions
+      - name: ZAP Full Scan
+        uses: action-full-scan@v0.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://hpdm-bmi-app.herokuapp.com/api?height=167&weight=70'
-          rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
